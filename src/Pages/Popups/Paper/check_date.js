@@ -12,7 +12,9 @@ const CheckDate = ({ message, onConfirm }) => {
             alt="receipt"
             style={{ width: "25%" }}
           />
-          <div style={{ padding: "0px 20px"}}>{message}</div>
+          <div style={{ padding: "0px 25px", textAlign: "center" }}>
+            {message}
+          </div>
           <button onClick={onConfirm} className="confirm_button">
             확인
           </button>

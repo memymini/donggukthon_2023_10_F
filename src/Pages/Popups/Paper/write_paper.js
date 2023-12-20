@@ -15,26 +15,58 @@ const WritePaper = ({ design, onConfirm }) => {
   const [showQuit, setShowQuit] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [text, setText] = useState("");
+  const [paperState, setPaperState] = useState("");
   const paperDesign = design;
+
   const handleTextChange = (event) => {
     setText(event.target.value);
   };
-
-  const handleSavePaper = () => {
-    // 여기서 서버로 데이터를 보내고 저장하는 로직을 추가해야 합니다.
-    // 예를 들어 axios를 사용하여 POST 요청을 보낼 수 있습니다.
-    axios
-      .post("/api/save_paper", { userId: 3, text, design: paperDesign })
-      .then((response) => {
-        console.log("Paper saved successfully");
-      })
-      .catch((error) => {
-        console.error("Error saving paper:", error);
-      });
-
-    // 저장이 완료되면 팝업을 닫습니다.
+  const handleWritePaper = () => {
+    //수정
+    if (text) {
+      axios
+        .patch(`/paper.json`, { content: text })
+        .then((response) => {
+          if (response.data.code === 204) {
+            console.log(response.data.contents);
+            setPaperState("롤링페이퍼 수정이 완료되었어요!");
+            setShowConfirm(true);
+          } else if (response.data.code === 400) {
+            alert(response.data.message);
+          } else if (response.data.code === 401) {
+            alert(response.data.message);
+          } else if (response.data.code === 409) {
+            alert(response.data.message);
+          }
+        })
+        .catch((error) => {
+          console.error("Error updating paper:", error);
+        }); // 처음 쓰기
+    } else {
+      axios
+        .post("/paper.json", {
+          userId: 3,
+          content: text,
+          design: paperDesign,
+        })
+        .then((response) => {
+          if (response.code === 201) {
+            console.log(response.contents);
+            setPaperState("롤링페이퍼 작성이 완료되었어요!");
+            setShowConfirm(true);
+          } else if (response.data.code === 400) {
+            alert(response.message);
+          } else if (response.data.code === 401) {
+            alert(response.message);
+          } else if (response.data.code === 409) {
+            alert(response.data.message);
+          }
+        })
+        .catch((error) => {
+          console.error("Error saving paper:", error);
+        });
+    }
   };
-  //디자인 매칭
 
   let designURL;
   switch (design) {
@@ -87,7 +119,15 @@ const WritePaper = ({ design, onConfirm }) => {
                   onChange={handleTextChange}
                   rows="15"
                   cols="50"
-                />
+                  style={{
+                    border: "none",
+                    outline: "none",
+                    background: "none",
+                    resize: "none",
+                  }}
+                >
+                  {text}
+                </textarea>
               </div>
             </div>
 
@@ -102,7 +142,7 @@ const WritePaper = ({ design, onConfirm }) => {
                 value="확인"
                 type="submit"
                 className="button_paperwrite"
-                onClick={handleSavePaper}
+                onClick={handleWritePaper}
               />
             </div>
           </form>
@@ -119,10 +159,9 @@ const WritePaper = ({ design, onConfirm }) => {
               }}
             />
           )}
-
           {showConfirm && (
             <EditPopup
-              message="롤링페이퍼 삭제가 완료되었어요. 😥"
+              message={paperState}
               onConfirm={() => {
                 setShowConfirm(false);
               }}

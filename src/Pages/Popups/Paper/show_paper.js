@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../../Css/ShowPaper.css";
 import "../../../Css/Common.css";
+
 import axios from "axios";
 import BearP from "../../../Image/Paper/곰p.png";
 import RaccoonP from "../../../Image/Paper/너구리p.png";
@@ -33,7 +34,7 @@ const ShowPaper = ({ design, onConfirm }) => {
     fetchData();
   }, []);
   //canRead확인
-  if (paperData.canRead == false) {
+  if (paperData.canRead === false) {
     onConfirm();
   }
   //디자인 매칭
@@ -71,7 +72,6 @@ const ShowPaper = ({ design, onConfirm }) => {
     // Show quit popup when delete is clicked
     setShowQuit(true);
   };
-  const canRead = paperData.canRead;
 
   const contents = paperData.contents;
   return (

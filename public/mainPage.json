@@ -5,6 +5,6 @@
     "nickname": "String",
     "code": "34UMOC",
     "info": "String의 이글루에 오신 걸 환영합니다~!",
-    "owner": false
+    "owner": true
   }
 }

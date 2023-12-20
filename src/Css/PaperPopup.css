@@ -67,16 +67,19 @@
 .tag_container {
   margin-top: 31px;
   display: flex;
-  width: 315px;
+  width: 288px;
   align-items: flex-start;
   align-content: flex-start;
   gap: 0px 0px;
   flex-wrap: wrap;
   height: 430px;
   overflow: scroll;
-  scrollbar-width: 0;
-  scrollbar-color: transparent transparent;
+  -ms-overflow-style: none;
 }
+.tag_container::-webkit-scrollbar {
+  display: none;
+}
+
 .paper_tag {
   width: 96px;
   height: 112px;

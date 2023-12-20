@@ -21,7 +21,79 @@
       }
     },
     {
-      "design": 2,
+      "design": 3,
+      "paperId": 3,
+      "writer": {
+        "userId": 2,
+        "korName": "응관",
+        "nickname": "닉넴"
+      }
+    },
+    {
+      "design": 1,
+      "paperId": 3,
+      "writer": {
+        "userId": 2,
+        "korName": "응관",
+        "nickname": "닉넴"
+      }
+    },
+    {
+      "design": 5,
+      "paperId": 3,
+      "writer": {
+        "userId": 2,
+        "korName": "응관",
+        "nickname": "닉넴"
+      }
+    },
+    {
+      "design": 6,
+      "paperId": 3,
+      "writer": {
+        "userId": 2,
+        "korName": "응관",
+        "nickname": "닉넴"
+      }
+    },
+    {
+      "design": 4,
+      "paperId": 3,
+      "writer": {
+        "userId": 2,
+        "korName": "응관",
+        "nickname": "닉넴"
+      }
+    },
+    {
+      "design": 3,
+      "paperId": 3,
+      "writer": {
+        "userId": 2,
+        "korName": "응관",
+        "nickname": "닉넴"
+      }
+    },
+    {
+      "design": 6,
+      "paperId": 3,
+      "writer": {
+        "userId": 2,
+        "korName": "응관",
+        "nickname": "닉넴"
+      }
+    },
+    {
+      "design": 4,
+      "paperId": 3,
+      "writer": {
+        "userId": 2,
+        "korName": "응관",
+        "nickname": "닉넴"
+      }
+    },
+    {
+      "design": 1,
       "paperId": 3,
       "writer": {
         "userId": 2,
@@ -39,79 +111,7 @@
       }
     },
     {
-      "design": 2,
-      "paperId": 3,
-      "writer": {
-        "userId": 2,
-        "korName": "응관",
-        "nickname": "닉넴"
-      }
-    },
-    {
-      "design": 2,
-      "paperId": 3,
-      "writer": {
-        "userId": 2,
-        "korName": "응관",
-        "nickname": "닉넴"
-      }
-    },
-    {
-      "design": 2,
-      "paperId": 3,
-      "writer": {
-        "userId": 2,
-        "korName": "응관",
-        "nickname": "닉넴"
-      }
-    },
-    {
-      "design": 2,
-      "paperId": 3,
-      "writer": {
-        "userId": 2,
-        "korName": "응관",
-        "nickname": "닉넴"
-      }
-    },
-    {
-      "design": 2,
-      "paperId": 3,
-      "writer": {
-        "userId": 2,
-        "korName": "응관",
-        "nickname": "닉넴"
-      }
-    },
-    {
-      "design": 2,
-      "paperId": 3,
-      "writer": {
-        "userId": 2,
-        "korName": "응관",
-        "nickname": "닉넴"
-      }
-    },
-    {
-      "design": 2,
-      "paperId": 3,
-      "writer": {
-        "userId": 2,
-        "korName": "응관",
-        "nickname": "닉넴"
-      }
-    },
-    {
-      "design": 2,
-      "paperId": 3,
-      "writer": {
-        "userId": 2,
-        "korName": "응관",
-        "nickname": "닉넴"
-      }
-    },
-    {
-      "design": 2,
+      "design": 5,
       "paperId": 3,
       "writer": {
         "userId": 2,
